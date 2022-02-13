@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krestiki_Noliki"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="КРЕСТИКИ НОЛИКИ" Height="800" Width="800">
+    <StackPanel HorizontalAlignment="Center">
+        <Label  Background="Azure" Content="Крестики Нолики!" FontSize="25" HorizontalContentAlignment="Center" Foreground="Black" />
+        <WrapPanel MinWidth="30" HorizontalAlignment="Center" >
+            <Button x:Name="Button_X"  Background="Blue" Width="150" Height="40" FontSize="25" Content="X" Click="ButtonBase_OnClick_X" Margin="5"  />
+            <Button x:Name="Button_O" Background="Brown" Width="150" Height="40" FontSize="25" Content="O" Click="ButtonBase_OnClick_O" Margin="5"/>
+            <Button x:Name="Button_New" Width="150" Height="40" FontSize="25" Content="New game" Click="Button_New_OnClick" Margin="5"/>
+            <Button x:Name="Button_Exit" Width="150" Height="40" FontSize="25" Content="Exit" Click="Button_Exit_OnClick" Margin="5" />
+            
+        </WrapPanel>
+        <WrapPanel HorizontalAlignment="Center">
+            <Label x:Name="Label_fisrt" Background="Azure" Content="Вход Х"  Margin="10" HorizontalContentAlignment="Center" />
+            <Label x:Name="Label_second" Background="Azure" Content="Вход O"  Margin="10" HorizontalContentAlignment="Center"/>
+        </WrapPanel>
+        
+       <Label Height="25"/>
+        
+        <Grid  ShowGridLines="True" Background="Aqua" Width="800" Height="650">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Button_0_0" Grid.Row="0" Grid.Column="0" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_0_1" Grid.Row="0" Grid.Column="1" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_0_2" Grid.Row="0" Grid.Column="2" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_1_0" Grid.Row="1" Grid.Column="0" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_1_1" Grid.Row="1" Grid.Column="1" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_1_2" Grid.Row="1" Grid.Column="2" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_2_0" Grid.Row="2" Grid.Column="0" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_2_1" Grid.Row="2" Grid.Column="1" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+            <Button x:Name="Button_2_2" Grid.Row="2" Grid.Column="2" FontSize="180" Click="ButtonBase_OnClick_0_0" />
+        </Grid>
+        
+        <Label x:Name="Label_colour" Background="Blue" />
+        <Label x:Name="Label_white"/>
+        <Label x:Name="Label_red" Background="Brown" />
+    </StackPanel>
+    
 </Window>
